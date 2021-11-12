@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/nav_first">
+
+    <fragment
+        android:id="@+id/nav_first"
+        android:icon="@drawable/ic_home"
+        android:name="com.example.navigation_kotlin.fragment.FirstFragment"
+        tools:layout="@layout/first_fragment" >
+
+        <action
+            android:id="@+id/act_first_to_second"
+            app:destination="@+id/nav_second"/>
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_second"
+        android:icon="@drawable/ic_info"
+        android:name="com.example.navigation_kotlin.fragment.SecondFragment"
+        tools:layout="@layout/second_fragment" >
+
+        <action
+            android:id="@+id/act_second_to_third"
+            app:destination="@+id/nav_third"/>
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_third"
+        android:icon="@drawable/ic_home"
+        android:name="com.example.navigation_kotlin.fragment.ThirdFragment"
+        tools:layout="@layout/third_fragment" >
+
+        <action
+            android:id="@+id/act_third_to_fourth"
+            app:destination="@+id/nav_fourth"/>
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_fourth"
+        android:icon="@drawable/ic_info"
+        android:name="com.example.navigation_kotlin.fragment.FourthFragment"
+        tools:layout="@layout/fourth_fragment" >
+
+        <action
+            android:id="@+id/act_fourth_to_first"
+            app:destination="@+id/nav_first"/>
+    </fragment>
+</navigation>
